@@ -6,7 +6,6 @@ export const AppContainer = styled.div`
 `;
 
 export const HomeContainer = styled.div`
-  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,8 +31,8 @@ export const HeaderContainer = styled.div`
 
 export const Toggle = styled.div`
   background-color: #ebebeb;
-  height: 50px;
-  width: 70px;
+  height: 30px;
+  width: 60px;
 
   @media (max-width: 1024px) {
     display: block;
@@ -57,8 +56,6 @@ export const MenuList = styled.div`
 `;
 
 export const MobileMenuList = styled.div`
-  background: red;
-  height: inherit;
   @media (max-width: 1024px) {
     width: 50%;
     display: flex;

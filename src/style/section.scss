@@ -9,10 +9,22 @@
   }
   &--1 {
     background-color: #000;
+    color: white;
+    &--hello-world {
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: all 4s ease-in-out;
+      transition-property: sliding-vertically;
+    }
   }
-  &--2 {
-    background-color: #f90;
-  }
+}
+
+.hello-world--text {
+  font-weight: 800;
+  font-size: 30px;
+
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 2px;
 }
 
 @include mobile {
@@ -43,6 +55,7 @@
     justify-content: center;
     align-items: center;
     &--box {
+      box-sizing: border-box;
       margin: 20px;
       border: 2px solid #000;
     }

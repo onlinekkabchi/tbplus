@@ -33,16 +33,17 @@ function App() {
 
   return (
     <AppContainer>
-      <p>테스트</p>
+      <p>onlinekkabchi@gmail.com 투브플러스 코딩테스트</p>
       <HeaderContainer>
         <HomeContainer onClick={goHome}>
-          <p>home</p>
+          <p style={{ fontWeight: "800", color: "white", cursor: "pointer" }}>
+            home
+          </p>
         </HomeContainer>
-        {/* <div>
-          <Toggle onClick={onAndOffToggle}>토글</Toggle>
+        <div>
+          <Toggle onClick={onAndOffToggle}>Toggle</Toggle>
           {toggleClicked ? (
             <MobileMenuList>
-              bb
               <MenuFirst />
               <MenuSecond />
               <MenuThird />
@@ -50,10 +51,9 @@ function App() {
           ) : (
             <></>
           )}
-        </div> */}
+        </div>
 
         <MenuList>
-          aa
           <MenuFirst />
           <MenuSecond />
           <MenuThird />

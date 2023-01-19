@@ -29,9 +29,20 @@
 }
 .section-3--1 {
   background-color: #000;
+  color: white;
 }
-.section-3--2 {
-  background-color: #f90;
+.section-3--1--hello-world {
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 4s ease-in-out;
+  transition-property: sliding-vertically;
+}
+
+.hello-world--text {
+  font-weight: 800;
+  font-size: 30px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 2px;
 }
 
 @media (max-width: 757px) {
@@ -61,6 +72,7 @@
     align-items: center;
   }
   .section-3--box {
+    box-sizing: border-box;
     margin: 20px;
     border: 2px solid #000;
   }
