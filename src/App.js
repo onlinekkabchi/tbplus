@@ -1,24 +1,66 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+
+import {
+  AppContainer,
+  HomeContainer,
+  Toggle,
+  HeaderContainer,
+  MenuList,
+  MobileMenuList,
+} from "./styled-component/headerStyle";
+import MenuFirst from "./menu/menu1";
+import MenuSecond from "./menu/menu2";
+import MenuThird from "./menu/menu3";
+import { Outlet, useNavigate } from "react-router-dom";
 
 function App() {
+  const [toggleClicked, setToggleClicked] = useState(false);
+  const navigate = useNavigate();
+
+  const onAndOffToggle = () => {
+    if (toggleClicked) {
+      setToggleClicked(false);
+      console.log("false");
+    } else {
+      setToggleClicked(true);
+      console.log("true");
+    }
+  };
+
+  const goHome = () => {
+    navigate("/");
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <p>테스트</p>
+      <HeaderContainer>
+        <HomeContainer onClick={goHome}>
+          <p>home</p>
+        </HomeContainer>
+        {/* <div>
+          <Toggle onClick={onAndOffToggle}>토글</Toggle>
+          {toggleClicked ? (
+            <MobileMenuList>
+              bb
+              <MenuFirst />
+              <MenuSecond />
+              <MenuThird />
+            </MobileMenuList>
+          ) : (
+            <></>
+          )}
+        </div> */}
+
+        <MenuList>
+          aa
+          <MenuFirst />
+          <MenuSecond />
+          <MenuThird />
+        </MenuList>
+      </HeaderContainer>
+      <Outlet />
+    </AppContainer>
   );
 }
 

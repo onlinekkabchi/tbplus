@@ -1,0 +1,69 @@
+.swiper-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide {
+  background-color: lightblue;
+  color: blue;
+  font-size: 20px;
+}
+
+.section-3 {
+  width: 100%;
+  height: 100%;
+}
+.section-3--box {
+  width: 200px;
+  height: 200px;
+}
+.section-3--1 {
+  background-color: #000;
+}
+.section-3--2 {
+  background-color: #f90;
+}
+
+@media (max-width: 757px) {
+  .section-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 758px) and (max-width: 1023px) {
+  .section-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .section-3--box {
+    margin: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .section-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .section-3--box {
+    margin: 20px;
+    border: 2px solid #000;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
